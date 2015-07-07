@@ -1,0 +1,168 @@
+@mixin marginv($value) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: $value;
+    margin-bottom: $value;
+}
+
+@mixin borderrad($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+body {
+    margin: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: $black_light;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+    h1 {
+        margin: 0;
+    }
+    h5 {
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    nav ul.social {
+        list-style: none;
+        margin: 25px;
+        padding: 0;
+        li {
+            display: inline-block;
+            @include marginv(1px);
+            a {
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+    form.search {
+        @include marginv(25px);
+        input {
+            width: 100%;
+            font-size: 22px;
+            padding: 3px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px $black_light solid;
+            border-bottom-color: rgba(52, 73, 94, 0.3);
+            background-image: url(../img/magnifier.png);
+            background-repeat: no-repeat;
+            background-position: 97% center;
+            background-size: 12px 12px;
+        }
+    }
+}
+
+//Content
+section.content {
+    h1.title {
+        text-align: center;
+    }
+    article {
+        @include marginv(20px);
+        background-color: #fafbfb;
+        background-color: rgba(250, 251, 251, 0.6) aside;
+        aside {
+            figure {
+                margin: 0;
+                width: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    h1 {
+                        margin: 15px;
+                        a {
+                            display: inline;
+                            color: $white_light;
+                            text-decoration: none;
+                            font-size: 1.1em;
+                            line-height: 2em;
+                            //margin: 15px;
+                            padding: 7px;
+                            padding-left: 0;
+                            padding-right: 0;
+                            box-shadow: 7px 0 0 rgba(52, 73, 94,0.8), -7px 0 0 rgba(52, 73, 94,0.8);
+                            background-color: $black_light;
+                            background-color: rgba(52, 73, 94,0.8);
+                        }
+                    }
+                }
+            }
+        }
+        section.text {
+            padding: 10px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1.2px;
+        }
+    }
+    div.pagination {
+        @include marginv(10px);
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        a.prebtn {
+            width: 20%;
+            border: 1px solid $black_light;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin-right: 3%;
+            @include borderrad(2px);
+            img {
+                width: 15px;
+            }
+        }
+        a.nextbtn {
+            text-align: center;
+            width: 77%;
+            border: 1px solid $blue_light;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        a.nextbtn:active {
+            background-color: $blue_dark;
+            color: $white_light;
+        }
+    }
+}
+
+//Footer
+footer {
+    margin-top: 50px;
+    img.avatar {
+        width: 60px;
+        height: 60px;
+        @include borderrad(50%);
+    }
+    h3 {
+        text-align: right;
+        float: right;
+        span.heartred {
+            color: $red_light;
+        }
+    }
+}

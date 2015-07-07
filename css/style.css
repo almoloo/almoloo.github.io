@@ -1,0 +1,153 @@
+body {
+  background: url(../img/paper_fibers.jpg);
+  font-family: 'Quicksand', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, input, a {
+  font-family: 'Quicksand', sans-serif; }
+
+a {
+  color: #3498db; }
+
+a:hover {
+  color: #2980b9; }
+
+@media screen and (max-width: 568px) {
+  body {
+    margin: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #34495e; }
+
+  header {
+    text-align: center;
+    margin: 0; }
+    header h1 {
+      margin: 0; }
+    header h5 {
+      margin: 0;
+      margin-bottom: 50px; }
+    header nav ul.social {
+      list-style: none;
+      margin: 25px;
+      padding: 0; }
+      header nav ul.social li {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 1px;
+        margin-bottom: 1px; }
+        header nav ul.social li a img {
+          width: 28px;
+          height: 28px; }
+    header form.search {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 25px;
+      margin-bottom: 25px; }
+      header form.search input {
+        width: 100%;
+        font-size: 22px;
+        padding: 3px;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px #34495e solid;
+        border-bottom-color: rgba(52, 73, 94, 0.3);
+        background-image: url(../img/magnifier.png);
+        background-repeat: no-repeat;
+        background-position: 97% center;
+        background-size: 12px 12px; }
+
+  section.content h1.title {
+    text-align: center; }
+  section.content article {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fafbfb;
+    background-color: rgba(250, 251, 251, 0.6) aside; }
+    section.content article aside figure {
+      margin: 0;
+      width: 100%;
+      position: relative; }
+      section.content article aside figure img {
+        width: 100%; }
+      section.content article aside figure figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; }
+        section.content article aside figure figcaption h1 {
+          margin: 15px; }
+          section.content article aside figure figcaption h1 a {
+            display: inline;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 1.1em;
+            line-height: 2em;
+            padding: 7px;
+            padding-left: 0;
+            padding-right: 0;
+            box-shadow: 7px 0 0 rgba(52, 73, 94, 0.8), -7px 0 0 rgba(52, 73, 94, 0.8);
+            background-color: #34495e;
+            background-color: rgba(52, 73, 94, 0.8); }
+    section.content article section.text {
+      padding: 10px;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 1.2px; }
+  section.content div.pagination {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center; }
+    section.content div.pagination a.prebtn {
+      width: 20%;
+      border: 1px solid #34495e;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      margin-right: 3%;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px; }
+      section.content div.pagination a.prebtn img {
+        width: 15px; }
+    section.content div.pagination a.nextbtn {
+      text-align: center;
+      width: 77%;
+      border: 1px solid #3498db;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      flex-flow: column;
+      align-items: center; }
+    section.content div.pagination a.nextbtn:active {
+      background-color: #2980b9;
+      color: #ecf0f1; }
+
+  footer {
+    margin-top: 50px; }
+    footer img.avatar {
+      width: 60px;
+      height: 60px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+    footer h3 {
+      text-align: right;
+      float: right; }
+      footer h3 span.heartred {
+        color: #e74c3c; } }
+
+/*# sourceMappingURL=style.css.map */

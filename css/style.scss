@@ -1,0 +1,12 @@
+@import 'uni';
+
+@media screen and (max-width: 568px) {
+    //phone
+    @import 'mobile';
+}
+@media screen and (min-width: 568px) and (max-width: 768px) {
+    //tablet
+}
+@media screen and (min-width: 769px) {
+    //desktop
+}
