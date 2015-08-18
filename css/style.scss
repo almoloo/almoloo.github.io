@@ -1,0 +1,282 @@
+$small: 28px;
+$medium: 32px;
+$large: 48px;
+$mlarge: 80px;
+$xlarge: 100px;
+$xxlarge: 150px;
+body {
+    font-family: 'denseregular';
+    background-image: url(../img/gradbg_bw.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    color: #3c3c3c;
+    margin: $xlarge;
+    margin-top: $xxlarge;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #3c3c3c;
+}
+
+::selection {
+    color: white;
+    background: #3c3c3c;
+}
+
+header {
+    display: flex;
+    .left {
+        width: 37.5%;
+        margin: auto;
+        text-align: center;
+        h1.name {
+            font-size: $xlarge;
+            margin: 0;
+        }
+        h3.sub {
+            font-size: $large;
+            margin: 0;
+        }
+        ul {
+            margin: 0;
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline;
+                margin: 5px;
+            }
+        }
+    }
+    .right {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        span {
+            font-size: $xlarge;
+            i {
+                display: block;
+                font-style: normal;
+            }
+            i.down {
+                margin-top: $small;
+                font-size: $small;
+            }
+        }
+    }
+}
+
+.posts {
+    margin-top: $xxlarge;
+    .post {
+        width: 100%;
+        margin-top: $xxlarge;
+        display: flex;
+        aside {
+            width: 37.5%;
+            margin: auto;
+            text-align: center;
+            h1.title {
+                font-size: $mlarge;
+                margin: 0;
+                a {
+                    color: #3c3c3c;
+                    text-decoration: none;
+                }
+            }
+            a.readmore {
+                text-decoration: none;
+                color: #848484;
+                font-size: $small;
+                margin-left: $xxlarge;
+            }
+        }
+        article {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            .thumbnail {
+                width: 100%;
+                box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.5);
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: $xxlarge;
+    display: flex;
+    text-align: center;
+    .left {
+        width: 37.5%;
+        margin: auto;
+        font-size: $medium +8;
+        .cc {
+            color: #e74c3c;
+            cursor: pointer;
+        }
+        i {
+            font-style: normal;
+            margin: $small;
+        }
+        a.mail {
+            text-decoration: none;
+            color: #484848;
+        }
+    }
+    .right {
+        width: 50%;
+        margin: auto;
+        span {
+            font-size: $xlarge;
+            i {
+                display: block;
+                font-style: normal;
+            }
+        }
+    }
+    .tehran{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    //phone
+    body {
+        margin: 50px;
+        margin-top: $xlarge;
+    }
+    header {
+        .left {
+            width: 100%;
+            margin: auto;
+            h1.name {
+                font-size: $large +20;
+            }
+            h3.sub {
+                font-size: $small;
+            }
+            .callmemobile {
+                margin-top: $xlarge;
+                span {
+                    font-size: $medium;
+                    display: block;
+                }
+                i.number {
+                    font-style: normal;
+                    display: block;
+                    font-size: $large;
+                    abbr {
+                        color: #e74c3c;
+                        cursor: pointer;
+                    }
+                }
+                a.email {
+                    margin-top: $xlarge;
+                    font-size: $medium;
+                    text-decoration: none;
+                    color: #3c3c3c;
+                }
+            }
+        }
+        .right {
+            display: none;
+            width: 0;
+            margin: auto;
+        }
+    }
+    .posts{
+        .post{
+            flex-wrap: wrap;
+            aside{
+                width: 100%;
+                h1.title{
+                    font-size: $large;
+                    margin-bottom: 5px;
+                }
+                a.readmore{
+                    display: none;
+                }
+            }
+            article{
+                width: 100%;
+            }
+        }
+    }
+    footer {
+        .right,
+        .left {
+            display: none;
+            width: 0;
+            margin: auto;
+        }
+        .tehran{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: $large;
+            .heart{
+                color: #e74c3c;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 768px) {
+    //tablet
+    header {
+        .left{
+            width: 100%;
+            h1.name{
+                font-size: $xlarge;
+            }
+            h3.sub{
+                font-size: $medium;
+            }
+        }
+        .right{
+            width: 0;
+            display: none;
+        }
+        .callmemobile{
+            display: none;
+        }
+    }
+    .posts{
+        .post{
+            flex-wrap: wrap;
+            aside{
+                width: 100%;
+                h1.title{
+                    margin-bottom: 10px;
+                }
+                a.readmore{
+                    display: none;
+                }
+            }
+            article{
+                width: 100%;
+            }
+        }
+    }
+    footer{
+        .right{
+            width: 0;
+            display: none;
+        }
+        .left{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    //desktop
+    .callmemobile {
+        display: none;
+    }
+}

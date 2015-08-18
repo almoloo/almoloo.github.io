@@ -1,0 +1,202 @@
+body {
+  font-family: 'denseregular';
+  background-image: url(../img/gradbg_bw.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color: #3c3c3c;
+  margin: 100px;
+  margin-top: 150px; }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #3c3c3c; }
+
+::selection {
+  color: white;
+  background: #3c3c3c; }
+
+header {
+  display: flex; }
+  header .left {
+    width: 37.5%;
+    margin: auto;
+    text-align: center; }
+    header .left h1.name {
+      font-size: 100px;
+      margin: 0; }
+    header .left h3.sub {
+      font-size: 48px;
+      margin: 0; }
+    header .left ul {
+      margin: 0;
+      margin-top: 10px;
+      padding: 0;
+      list-style: none; }
+      header .left ul li {
+        display: inline;
+        margin: 5px; }
+  header .right {
+    width: 50%;
+    margin: auto;
+    text-align: center; }
+    header .right span {
+      font-size: 100px; }
+      header .right span i {
+        display: block;
+        font-style: normal; }
+      header .right span i.down {
+        margin-top: 28px;
+        font-size: 28px; }
+
+.posts {
+  margin-top: 150px; }
+  .posts .post {
+    width: 100%;
+    margin-top: 150px;
+    display: flex; }
+    .posts .post aside {
+      width: 37.5%;
+      margin: auto;
+      text-align: center; }
+      .posts .post aside h1.title {
+        font-size: 80px;
+        margin: 0; }
+        .posts .post aside h1.title a {
+          color: #3c3c3c;
+          text-decoration: none; }
+      .posts .post aside a.readmore {
+        text-decoration: none;
+        color: #848484;
+        font-size: 28px;
+        margin-left: 150px; }
+    .posts .post article {
+      width: 50%;
+      margin: auto;
+      text-align: center; }
+      .posts .post article .thumbnail {
+        width: 100%;
+        box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.5); }
+
+footer {
+  margin-top: 150px;
+  display: flex;
+  text-align: center; }
+  footer .left {
+    width: 37.5%;
+    margin: auto;
+    font-size: 40px; }
+    footer .left .cc {
+      color: #e74c3c;
+      cursor: pointer; }
+    footer .left i {
+      font-style: normal;
+      margin: 28px; }
+    footer .left a.mail {
+      text-decoration: none;
+      color: #484848; }
+  footer .right {
+    width: 50%;
+    margin: auto; }
+    footer .right span {
+      font-size: 100px; }
+      footer .right span i {
+        display: block;
+        font-style: normal; }
+  footer .tehran {
+    display: none; }
+
+@media screen and (max-width: 568px) {
+  body {
+    margin: 50px;
+    margin-top: 100px; }
+
+  header .left {
+    width: 100%;
+    margin: auto; }
+    header .left h1.name {
+      font-size: 68px; }
+    header .left h3.sub {
+      font-size: 28px; }
+    header .left .callmemobile {
+      margin-top: 100px; }
+      header .left .callmemobile span {
+        font-size: 32px;
+        display: block; }
+      header .left .callmemobile i.number {
+        font-style: normal;
+        display: block;
+        font-size: 48px; }
+        header .left .callmemobile i.number abbr {
+          color: #e74c3c;
+          cursor: pointer; }
+      header .left .callmemobile a.email {
+        margin-top: 100px;
+        font-size: 32px;
+        text-decoration: none;
+        color: #3c3c3c; }
+  header .right {
+    display: none;
+    width: 0;
+    margin: auto; }
+
+  .posts .post {
+    flex-wrap: wrap; }
+    .posts .post aside {
+      width: 100%; }
+      .posts .post aside h1.title {
+        font-size: 48px;
+        margin-bottom: 5px; }
+      .posts .post aside a.readmore {
+        display: none; }
+    .posts .post article {
+      width: 100%; }
+
+  footer .right,
+  footer .left {
+    display: none;
+    width: 0;
+    margin: auto; }
+  footer .tehran {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 48px; }
+    footer .tehran .heart {
+      color: #e74c3c; } }
+@media screen and (min-width: 568px) and (max-width: 768px) {
+  header .left {
+    width: 100%; }
+    header .left h1.name {
+      font-size: 100px; }
+    header .left h3.sub {
+      font-size: 32px; }
+  header .right {
+    width: 0;
+    display: none; }
+  header .callmemobile {
+    display: none; }
+
+  .posts .post {
+    flex-wrap: wrap; }
+    .posts .post aside {
+      width: 100%; }
+      .posts .post aside h1.title {
+        margin-bottom: 10px; }
+      .posts .post aside a.readmore {
+        display: none; }
+    .posts .post article {
+      width: 100%; }
+
+  footer .right {
+    width: 0;
+    display: none; }
+  footer .left {
+    width: 100%; } }
+@media screen and (min-width: 769px) {
+  .callmemobile {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */
