@@ -193,7 +193,7 @@ footer {
 @media screen and (min-width: 568px) and (max-width: 768px) {
     //tablet
     header {
-        .left{
+        .cont{
             width: 100%;
             h1.name{
                 font-size: $xlarge;
@@ -201,13 +201,6 @@ footer {
             h3.sub{
                 font-size: $medium;
             }
-        }
-        .right{
-            width: 0;
-            display: none;
-        }
-        .callmemobile{
-            display: none;
         }
     }
     .posts{
@@ -228,12 +221,9 @@ footer {
         }
     }
     footer{
-        .right{
-            width: 0;
-            display: none;
-        }
-        .left{
+        .cont{
             width: 100%;
+            display: block;
         }
     }
 }

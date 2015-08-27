@@ -1,5 +1,6 @@
 body {
   font-family: 'denseregular';
+  background-image: url(../img/gradbg_bw.jpg);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -138,17 +139,12 @@ footer {
       footer .cont a {
         font-size: 48px; } }
 @media screen and (min-width: 568px) and (max-width: 768px) {
-  header .left {
+  header .cont {
     width: 100%; }
-    header .left h1.name {
+    header .cont h1.name {
       font-size: 100px; }
-    header .left h3.sub {
+    header .cont h3.sub {
       font-size: 32px; }
-  header .right {
-    width: 0;
-    display: none; }
-  header .callmemobile {
-    display: none; }
 
   .posts .post {
     flex-wrap: wrap; }
@@ -161,11 +157,9 @@ footer {
     .posts .post article {
       width: 100%; }
 
-  footer .right {
-    width: 0;
-    display: none; }
-  footer .left {
-    width: 100%; } }
+  footer .cont {
+    width: 100%;
+    display: block; } }
 @media screen and (min-width: 769px) {
   .callmemobile {
     display: none; } }
