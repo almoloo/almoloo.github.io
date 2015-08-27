@@ -1,3 +1,4 @@
+$xsmall: 22px;
 $small: 28px;
 $medium: 32px;
 $large: 48px;
@@ -29,8 +30,8 @@ body {
 
 header {
     display: flex;
-    .left {
-        width: 37.5%;
+    .cont {
+        width: 100%;
         margin: auto;
         text-align: center;
         h1.name {
@@ -57,12 +58,14 @@ header {
         margin: auto;
         text-align: center;
         span {
-            font-size: $xlarge;
-            i {
-                display: block;
+            font-size: $large;
+            i.hhi {
+                background-color: #fff;
                 font-style: normal;
+                padding: 3px;
             }
             i.down {
+                display: block;
                 margin-top: $small;
                 font-size: $small;
             }
@@ -111,10 +114,10 @@ footer {
     margin-top: $xxlarge;
     display: flex;
     text-align: center;
-    .left {
-        width: 37.5%;
+    .cont {
+        width: 50%;
         margin: auto;
-        font-size: $medium +8;
+        font-size: $large;
         .cc {
             color: #e74c3c;
             cursor: pointer;
@@ -128,17 +131,6 @@ footer {
             color: #484848;
         }
     }
-    .right {
-        width: 50%;
-        margin: auto;
-        span {
-            font-size: $xlarge;
-            i {
-                display: block;
-                font-style: normal;
-            }
-        }
-    }
     .tehran{
         display: none;
     }
@@ -147,46 +139,23 @@ footer {
 @media screen and (max-width: 568px) {
     //phone
     body {
-        margin: 50px;
+        margin: 10px;
         margin-top: $xlarge;
     }
     header {
-        .left {
+        .cont {
             width: 100%;
             margin: auto;
             h1.name {
-                font-size: $large +20;
+                font-size: $large;
             }
             h3.sub {
-                font-size: $small;
+                font-size: $xsmall;
             }
-            .callmemobile {
-                margin-top: $xlarge;
-                span {
-                    font-size: $medium;
-                    display: block;
-                }
-                i.number {
-                    font-style: normal;
-                    display: block;
-                    font-size: $large;
-                    abbr {
-                        color: #e74c3c;
-                        cursor: pointer;
-                    }
-                }
-                a.email {
-                    margin-top: $xlarge;
-                    font-size: $medium;
-                    text-decoration: none;
-                    color: #3c3c3c;
-                }
+            ul li a img{
+                width:$medium;
+                height: $medium;
             }
-        }
-        .right {
-            display: none;
-            width: 0;
-            margin: auto;
         }
     }
     .posts{
@@ -208,19 +177,14 @@ footer {
         }
     }
     footer {
-        .right,
-        .left {
-            display: none;
-            width: 0;
-            margin: auto;
-        }
-        .tehran{
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: $large;
-            .heart{
-                color: #e74c3c;
+            margin-top: $xlarge;
+        .cont {
+            font-size: $medium;
+            i{
+                display: block;
+            }
+            a{
+                font-size: $large;
             }
         }
     }
