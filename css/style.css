@@ -1,14 +1,13 @@
-body {
-  font-family: 'denseregular';
-  background-image: url(../img/gradbg_bw.jpg);
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  color: #3c3c3c;
-  margin: 100px;
-  margin-top: 150px; }
-
+@font-face {
+  font-family: 'big_johnregular';
+  src: url("big_john-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'slim_joeregular';
+  src: url("slim_joe-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 ::-moz-selection {
   /* Code for Firefox */
   color: white;
@@ -18,150 +17,116 @@ body {
   color: white;
   background: #3c3c3c; }
 
-header {
-  display: flex; }
-  header .cont {
-    width: 100%;
-    margin: auto;
-    text-align: center; }
-    header .cont h1.name {
-      font-size: 100px;
-      margin: 0; }
-    header .cont h3.sub {
-      font-size: 48px;
-      margin: 0; }
-    header .cont ul {
-      margin: 0;
-      margin-top: 10px;
-      padding: 0;
-      list-style: none; }
-      header .cont ul li {
-        display: inline;
-        margin: 5px; }
-  header .right {
-    width: 50%;
-    margin: auto;
-    text-align: center; }
-    header .right span {
-      font-size: 48px; }
-      header .right span i.hhi {
-        background-color: #fff;
-        font-style: normal;
-        padding: 3px; }
-      header .right span i.down {
-        display: block;
-        margin-top: 28px;
-        font-size: 28px; }
+.uline {
+  text-decoration: underline; }
 
-.posts {
-  margin-top: 150px; }
-  .posts .post {
-    width: 100%;
-    margin-top: 150px;
-    display: flex; }
-    .posts .post aside {
-      width: 37.5%;
-      margin: auto;
-      text-align: center; }
-      .posts .post aside h1.title {
-        font-size: 80px;
-        margin: 0; }
-        .posts .post aside h1.title a {
-          color: #3c3c3c;
-          text-decoration: none; }
-      .posts .post aside a.readmore {
-        text-decoration: none;
-        color: #848484;
-        font-size: 28px;
-        margin-left: 150px; }
-    .posts .post article {
+body {
+  font-family: 'big_johnregular';
+  margin-top: 200px;
+  display: flex; }
+
+.container {
+  width: 45%;
+  margin: auto;
+  text-align: justify; }
+  .container header h1 {
+    font-family: 'slim_joeregular';
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0.2em;
+    color: #000;
+    color: rgba(0, 0, 0, 0.7); }
+    .container header h1 span {
+      font-family: 'big_johnregular';
+      font-weight: 100;
+      text-decoration: underline;
+      color: #b70f0f;
+      color: rgba(183, 15, 15, 0.7); }
+  .container header h5 {
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    color: #000;
+    color: rgba(0, 0, 0, 0.7); }
+    .container header h5 span {
+      color: #b70f0f;
+      color: rgba(183, 15, 15, 0.7); }
+  .container article {
+    margin-bottom: 70px;
+    margin-top: 70px; }
+    .container article p {
+      letter-spacing: 2.5px;
+      line-height: 1.8em;
+      color: #000;
+      color: rgba(0, 0, 0, 0.7); }
+  .container footer ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    margin-bottom: 20px; }
+    .container footer ul li {
+      display: inline-flex; }
+      .container footer ul li a {
+        color: #b70f0f;
+        color: rgba(183, 15, 15, 0.7);
+        text-decoration: none; }
+        .container footer ul li a span {
+          text-decoration: underline; }
+    .container footer ul i {
+      color: #000;
+      color: rgba(0, 0, 0, 0.7); }
+  .container footer .contact {
+    display: flex;
+    color: #000;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 50px; }
+    .container footer .contact a {
       width: 50%;
       margin: auto;
-      text-align: center; }
-      .posts .post article .thumbnail {
-        width: 100%;
-        box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.5); }
-
-footer {
-  margin-top: 150px;
-  display: flex;
-  text-align: center; }
-  footer .cont {
-    width: 50%;
-    margin: auto;
-    font-size: 48px; }
-    footer .cont .cc {
-      color: #e74c3c;
-      cursor: pointer; }
-    footer .cont i {
-      font-style: normal;
-      margin: 28px; }
-    footer .cont a.mail {
+      text-align: left;
       text-decoration: none;
-      color: #484848; }
-  footer .tehran {
-    display: none; }
+      color: #000;
+      color: rgba(0, 0, 0, 0.7); }
+    .container footer .contact span {
+      width: 50%;
+      margin: auto;
+      text-align: right; }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   body {
-    margin: 10px;
-    margin-top: 100px; }
+    margin-top: 0px; }
 
-  header .cont {
-    width: 100%;
-    margin: auto; }
-    header .cont h1.name {
-      font-size: 48px; }
-    header .cont h3.sub {
-      font-size: 22px; }
-    header .cont ul li a img {
-      width: 32px;
-      height: 32px; }
-
-  .posts .post {
-    flex-wrap: wrap; }
-    .posts .post aside {
-      width: 100%; }
-      .posts .post aside h1.title {
-        font-size: 48px;
-        margin-bottom: 5px; }
-      .posts .post aside a.readmore {
-        display: none; }
-    .posts .post article {
-      width: 100%; }
-
-  footer {
-    margin-top: 100px; }
-    footer .cont {
-      font-size: 32px; }
-      footer .cont i {
-        display: block; }
-      footer .cont a {
-        font-size: 48px; } }
+  .container {
+    width: 96%;
+    text-align: left; }
+    .container header h1 {
+      margin-top: 70px; }
+    .container article p {
+      font-size: 1.1em; }
+    .container footer ul li {
+      text-align: center;
+      display: block;
+      margin: 10px; }
+      .container footer ul li a {
+        font-size: 2.2em; }
+    .container footer ul i {
+      display: none; }
+    .container footer .contact {
+      display: block; }
+      .container footer .contact a {
+        display: block;
+        text-align: center;
+        font-size: 2.5em;
+        padding: 10px; }
+      .container footer .contact span {
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 2em; } }
 @media screen and (min-width: 568px) and (max-width: 768px) {
-  header .cont {
-    width: 100%; }
-    header .cont h1.name {
-      font-size: 100px; }
-    header .cont h3.sub {
-      font-size: 32px; }
-
-  .posts .post {
-    flex-wrap: wrap; }
-    .posts .post aside {
-      width: 100%; }
-      .posts .post aside h1.title {
-        margin-bottom: 10px; }
-      .posts .post aside a.readmore {
-        display: none; }
-    .posts .post article {
-      width: 100%; }
-
-  footer .cont {
-    width: 100%;
-    display: block; } }
-@media screen and (min-width: 769px) {
-  .callmemobile {
-    display: none; } }
+  .container {
+    width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */

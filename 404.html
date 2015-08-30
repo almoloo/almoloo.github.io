@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>title</title>
-    <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="font/stylesheet.css">
-      <style>
-        body{
-            background-image: url(img/gradbg_bw.jpg);
-            background-size: cover;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            -o-background-size: cover;
-            margin: 100px;
+    <style>
+        @font-face {
+            font-family: 'big_johnregular';
+            src: url('css/big_john-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
-          .container{
-              display: flex;
-          }
-          .container .left{
-              width: 50%;
-              margin: auto;
-              text-align: center;
-          }
-          .container .left span.bigbluedot{
-              background-color: #3498db;
-              width: 400px;
-              height: 400px;
-              border-radius: 50%;
-              -moz-border-radius: 50%;
-              -o-border-radius: 50%;
-              -webkit-border-radius: 50%;
-              display: block;
-          }
-          .container .right{
-              width: 50%;
-              margin: auto;
-              font-size: 64px;
-          }
-          .container .right a{
-              font-size: 32px;
-          }
-          .container h4{
-              margin: 0;
-          }
-      </style>
-  </head>
-  <body>
+        
+        body {
+            background-color: #ecf0f1;
+            margin: 100px;
+            font-family: 'big_johnregular';
+        }
+        
+        .container {
+            display: flex;
+        }
+        
+        .container .left {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .container .left span.bigbluedot {
+            background-color: #3498db;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            display: block;
+        }
+        
+        .container .right {
+            width: 50%;
+            margin: auto;
+            font-size: 64px;
+        }
+        
+        .container .right a {
+            font-size: 32px;
+            display: block;
+        }
+        
+        .container h4 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
     <!-- page content -->
-      <div class="container">
-          <div class="left">
-              <span class="bigbluedot"></span>
-          </div>
-          <div class="right">
-              <h4>404</h4>
-              Where you looking for a big blue dot?
-              no? then you're lost.<a href="http://almo.pw">Go to homepage→</a>
-          </div>
-      </div>
-    </body>
+    <div class="container">
+        <div class="left">
+            <span class="bigbluedot"></span>
+        </div>
+        <div class="right">
+            <h4>404</h4> Where you looking for a big blue dot? no? then you're lost.<a href="http://almo.pw">Go to homepage→</a>
+        </div>
+    </div>
+</body>
+
 </html>

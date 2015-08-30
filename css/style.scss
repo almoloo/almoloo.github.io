@@ -1,22 +1,21 @@
-$xsmall: 22px;
-$small: 28px;
-$medium: 32px;
-$large: 48px;
-$mlarge: 80px;
-$xlarge: 100px;
-$xxlarge: 150px;
-body {
-    font-family: 'denseregular';
-    background-image: url(../img/gradbg_bw.jpg);
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    color: #3c3c3c;
-    margin: $xlarge;
-    margin-top: $xxlarge;
+//fonts
+@font-face {
+    font-family: 'big_johnregular';
+    src: url('big_john-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'slim_joeregular';
+    src: url('slim_joe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Variables
+$cred: #b70f0f;
+//classes
 ::-moz-selection {
     /* Code for Firefox */
     color: white;
@@ -28,163 +27,150 @@ body {
     background: #3c3c3c;
 }
 
-header {
+.uline {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'big_johnregular';
+    margin-top: 200px;
     display: flex;
-    .cont {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        h1.name {
-            font-size: $xlarge;
-            margin: 0;
-        }
-        h3.sub {
-            font-size: $large;
-            margin: 0;
-        }
-        ul {
-            margin: 0;
-            margin-top: 10px;
-            padding: 0;
-            list-style: none;
-            li {
-                display: inline;
-                margin: 5px;
-            }
-        }
-    }
-    .right {
-        width: 50%;
-        margin: auto;
-        text-align: center;
-        span {
-            font-size: $large;
-            i.hhi {
-                background-color: #fff;
-                font-style: normal;
-                padding: 3px;
-            }
-            i.down {
-                display: block;
-                margin-top: $small;
-                font-size: $small;
-            }
-        }
-    }
 }
 
-.posts {
-    margin-top: $xxlarge;
-    .post {
-        width: 100%;
-        margin-top: $xxlarge;
-        display: flex;
-        aside {
-            width: 37.5%;
-            margin: auto;
-            text-align: center;
-            h1.title {
-                font-size: $mlarge;
-                margin: 0;
-                a {
-                    color: #3c3c3c;
-                    text-decoration: none;
-                }
-            }
-            a.readmore {
-                text-decoration: none;
-                color: #848484;
-                font-size: $small;
-                margin-left: $xxlarge;
-            }
-        }
-        article {
-            width: 50%;
-            margin: auto;
-            text-align: center;
-            .thumbnail {
-                width: 100%;
-                box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.5);
-            }
-        }
-    }
-}
-
-footer {
-    margin-top: $xxlarge;
-    display: flex;
-    text-align: center;
-    .cont {
-        width: 50%;
-        margin: auto;
-        font-size: $large;
-        .cc {
-            color: #e74c3c;
-            cursor: pointer;
-        }
-        i {
-            font-style: normal;
-            margin: $small;
-        }
-        a.mail {
-            text-decoration: none;
-            color: #484848;
-        }
-    }
-    .tehran{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 568px) {
-    //phone
-    body {
-        margin: 10px;
-        margin-top: $xlarge;
-    }
+.container {
+    width: 45%;
+    margin: auto;
+    text-align: justify;
     header {
-        .cont {
-            width: 100%;
-            margin: auto;
-            h1.name {
-                font-size: $large;
+        h1 {
+            font-family: 'slim_joeregular';
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 0.2em;
+            color: #000;
+            color: rgba(0, 0, 0, 0.7);
+            span {
+                font-family: 'big_johnregular';
+                font-weight: 100;
+                text-decoration: underline;
+                color: #b70f0f;
+                color: rgba(183, 15, 15, 0.7);
             }
-            h3.sub {
-                font-size: $xsmall;
-            }
-            ul li a img{
-                width:$medium;
-                height: $medium;
+        }
+        h5 {
+            text-align: center;
+            margin-top: 0.2em;
+            margin-bottom: 0;
+            color: #000;
+            color: rgba(0, 0, 0, 0.7);
+            span {
+                color: $cred;
+                color: rgba(183, 15, 15, 0.7);
             }
         }
     }
-    .posts{
-        .post{
-            flex-wrap: wrap;
-            aside{
-                width: 100%;
-                h1.title{
-                    font-size: $large;
-                    margin-bottom: 5px;
-                }
-                a.readmore{
-                    display: none;
-                }
-            }
-            article{
-                width: 100%;
-            }
+    article {
+        margin-bottom: 70px;
+        margin-top: 70px;
+        p {
+            letter-spacing: 2.5px;
+            line-height: 1.8em;
+            color: #000;
+            color: rgba(0, 0, 0, 0.7);
         }
     }
     footer {
-            margin-top: $xlarge;
-        .cont {
-            font-size: $medium;
-            i{
-                display: block;
+        ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 20px;
+            li {
+                display: inline-flex;
+                a {
+                    color: $cred;
+                    color: rgba(183, 15, 15, 0.7);
+                    text-decoration: none;
+                    span {
+                        text-decoration: underline;
+                    }
+                }
             }
-            a{
-                font-size: $large;
+            i {
+                color: #000;
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
+        .contact {
+            display: flex;
+            color: #000;
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 50px;
+            a {
+                width: 50%;
+                margin: auto;
+                text-align: left;
+                text-decoration: none;
+                color: #000;
+                color: rgba(0, 0, 0, 0.7);
+            }
+            span {
+                width: 50%;
+                margin: auto;
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    //phone
+    body {
+        margin-top: 0px;
+    }
+    .container {
+        width: 96%;
+        text-align: left;
+        header {
+            h1 {
+                margin-top: 70px;
+            }
+        }
+        article {
+            p {
+                font-size: 1.1em;
+            }
+        }
+        footer {
+            ul {
+                li {
+                    text-align: center;
+                    display: block;
+                    margin: 10px;
+                    a {
+                        font-size: 2.2em;
+                    }
+                }
+                i {
+                    display: none;
+                }
+            }
+            .contact {
+                display: block;
+                a {
+                    display: block;
+                    text-align: center;
+                    font-size: 2.5em;
+                    padding: 10px;
+                }
+                span {
+                    display: block;
+                    width: 100%;
+                    margin: auto;
+                    text-align: center;
+                    font-size: 2em;
+                }
             }
         }
     }
@@ -192,45 +178,7 @@ footer {
 
 @media screen and (min-width: 568px) and (max-width: 768px) {
     //tablet
-    header {
-        .cont{
-            width: 100%;
-            h1.name{
-                font-size: $xlarge;
-            }
-            h3.sub{
-                font-size: $medium;
-            }
-        }
-    }
-    .posts{
-        .post{
-            flex-wrap: wrap;
-            aside{
-                width: 100%;
-                h1.title{
-                    margin-bottom: 10px;
-                }
-                a.readmore{
-                    display: none;
-                }
-            }
-            article{
-                width: 100%;
-            }
-        }
-    }
-    footer{
-        .cont{
-            width: 100%;
-            display: block;
-        }
-    }
-}
-
-@media screen and (min-width: 769px) {
-    //desktop
-    .callmemobile {
-        display: none;
+    .container {
+        width: 80%;
     }
 }
