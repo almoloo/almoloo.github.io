@@ -57,8 +57,69 @@
             </div>
         </footer>
     </div>
-    <script src="js/fittext.js"></script>
+    <!--<script src="js/fittext.js"></script>-->
     <script>
+        (function(){ 
+12   var css = function (el, prop) { 
+13     return window.getComputedStyle ? getComputedStyle(el).getPropertyValue(prop) : el.currentStyle[prop]; 
+14   }; 
+15    
+16   var addEvent = function (el, type, fn) { 
+17     if (el.addEventListener) 
+18       el.addEventListener(type, fn, false); 
+19 		else 
+20 			el.attachEvent('on'+type, fn); 
+21   }; 
+22    
+23   var extend = function(obj,ext){ 
+24     for(var key in ext) 
+25       if(ext.hasOwnProperty(key)) 
+26         obj[key] = ext[key]; 
+27     return obj; 
+28   }; 
+29 
+ 
+30   window.fitText = function (el, kompressor, options) { 
+31 
+ 
+32     var settings = extend({ 
+33       'minFontSize' : -1/0, 
+34       'maxFontSize' : 1/0 
+35     },options); 
+36 
+ 
+37     var fit = function (el) { 
+38       var compressor = kompressor || 1; 
+39 
+ 
+40       var resizer = function () { 
+41         el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px'; 
+42       }; 
+43 
+ 
+44       // Call once to set. 
+45       resizer(); 
+46 
+ 
+47       // Bind events 
+48       // If you have any js library which support Events, replace this part 
+49       // and remove addEvent function (or use original jQuery version) 
+50       addEvent(window, 'resize', resizer); 
+51     }; 
+52 
+ 
+53     if (el.length) 
+54       for(var i=0; i<el.length; i++) 
+55         fit(el[i]); 
+56     else 
+57       fit(el); 
+58 
+ 
+59     // return set of elements 
+60     return el; 
+61   }; 
+62 })(); 
+
         window.fitText(document.getElementById("responsive_headline"), 1.5);
         window.fitText(document.getElementById("sub"), 1.5);
         window.fitText(document.getElementById("social"), 2.6);
